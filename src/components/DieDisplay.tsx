@@ -8,7 +8,7 @@ import tengwarIcon from "../assets/tengwar_icon.png";
 interface DieDisplayProps {
   face: string;
   feat: boolean;
-  selected: boolean;
+  selected?: boolean;
 }
 
 export function DieDisplay(props: DieDisplayProps) {
@@ -25,7 +25,7 @@ export function DieDisplay(props: DieDisplayProps) {
   let strong = false;
   let display = <Typography>{props.face}</Typography>;
 
-  let variant = "elevation";
+  let variant: "elevation" | "outlined" = "elevation";
   let background = "linen";
   let color = "black";
 
@@ -49,7 +49,9 @@ export function DieDisplay(props: DieDisplayProps) {
         }}
       >
         {props.face}
-        {strong && <img src={tengwarIcon} height="12" align="top" />}
+        {strong && (
+          <img src={tengwarIcon} height="12" style={{ verticalAlign: "top" }} />
+        )}
       </Typography>
     );
   } else if (props.face === "G") {
