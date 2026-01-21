@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #000; */
+    /* color: white; */
+}
+
+a, a:visited, a:hover {
+    /* color: white; */
+}
+
+.appbar {
+    padding: 1em;
+    /* background-image: url(/src/assets/pawel-czer.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+.upp-profile .MuiFormHelperText-root {
+    text-align: center;
+    margin: 0;
+}
